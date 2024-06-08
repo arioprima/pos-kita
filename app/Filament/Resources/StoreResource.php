@@ -22,6 +22,12 @@ class StoreResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationLabel = 'Store';
+
+    protected static ?string $navigationGroup = 'Store Management';
+
+
+
     public static function form(Form $form): Form
     {
         return $form
