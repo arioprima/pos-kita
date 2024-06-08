@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\ArticleResource\Pages;
+namespace App\Filament\Resources\ShiftResource\Pages;
 
-use App\Filament\Resources\ArticleResource;
+use App\Filament\Resources\ShiftResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditArticle extends EditRecord
+class EditShift extends EditRecord
 {
-    protected static string $resource = ArticleResource::class;
+    protected static string $resource = ShiftResource::class;
 
     protected function getHeaderActions(): array
     {

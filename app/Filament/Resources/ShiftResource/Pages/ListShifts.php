@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\CategoryResource\Pages;
+namespace App\Filament\Resources\ShiftResource\Pages;
 
-use App\Filament\Resources\CategoryResource;
+use App\Filament\Resources\ShiftResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListCategories extends ListRecords
+class ListShifts extends ListRecords
 {
-    protected static string $resource = CategoryResource::class;
+    protected static string $resource = ShiftResource::class;
 
     protected function getHeaderActions(): array
     {

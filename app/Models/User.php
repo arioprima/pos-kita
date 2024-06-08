@@ -18,17 +18,32 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'username',
         'email',
         'password',
-        'employee_id',
+        'first_name',
+        'last_name',
+        'email',
+        'phone',
+        'position',
+        'hire_date',
+        'is_admin',
     ];
 
-    public function employee()
+    public function stores()
     {
-        return $this->belongsTo(Employee::class, 'employee_id');
+        // return $this->belongsToMany(Store::class);
+        return $this->belongsToMany(Store::class, 'user_stores', 'user_id', 'store_id');
+
+    }
+    public function shifts()
+    {
+        // return $this->belongsToMany(Store::class);
+        return $this->belongsToMany(Shift::class, 'user_shifts', 'user_id', 'shift_id');
+
     }
 
+    
     /**
      * The attributes that should be hidden for serialization.
      *
