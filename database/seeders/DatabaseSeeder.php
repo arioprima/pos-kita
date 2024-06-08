@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
             ShiftSeeder::class,
             StoreSeeder::class,
             UserShiftSeeder::class,
-            UserStoreSeeder::class
+            UserStoreSeeder::class,
+            ProductCategorySeeder::class,
+            StoreProductCategorySeeder::class,
             
         ]);
     }
