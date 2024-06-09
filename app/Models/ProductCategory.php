@@ -27,4 +27,10 @@ class ProductCategory extends Model
         return $this->belongsToMany(Store::class, 'store_product_categories', 'product_category_id', 'store_id');
 
     }
+    public function products()
+    {
+        // return $this->belongsToMany(User::class);
+        return $this->belongsToMany(Product::class, 'product_category_id', 'product_id');
+
+    }
 }
